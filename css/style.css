@@ -1,10 +1,10 @@
-
 *,
 *::before,
 *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 html {
@@ -73,6 +73,81 @@ ul {
 
 .highlight {
     color: var(--blue-text);
+}
+
+/* Nav drawer transition */
+#navDrawer {
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#navOverlay {
+    transition: opacity 0.35s ease;
+}
+
+.nav-link {
+    position: relative;
+    color: #6b7280;
+    font-weight: 500;
+    transition: color .3s;
+}
+
+.nav-link:hover {
+    color: #4356D6;
+}
+
+.nav-link.active {
+    color: #4356D6;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: #4356D6;
+}
+
+/* Feature card hover */
+.feature-card {
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-card:hover {
+    border-color: #4356D6;
+    box-shadow: 0 4px 20px rgba(67, 86, 214, 0.12);
+}
+
+/* Button hover transitions */
+.btn-primary-filled {
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary-filled:hover {
+    background: #3344C0;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(67, 86, 214, 0.35);
+}
+
+.btn-outline-primary {
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-outline-primary:hover {
+    background: #4356D6;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Contact Us button */
+.btn-contact {
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-contact:hover {
+    background: #3344C0;
+    transform: translateY(-1px);
 }
 
 /* ── Buttons ──────────────────────────────────────────────── */
